@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números primos que estão entre 0 e 200.</title>
+</head>
+<body>
+
+    <h1>Números primos que estão entre 0 e 200.</h1>
+
+    <script>
+        function isPrime(num) {
+            if (num < 2) {
+              return false;
+            }
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+              if (num % i === 0) {
+                return false;
+              }
+            }
+            return true;
+          }
+
+          let table = "<table><tr><th>Número</th></tr>";
+          for (let i = 0; i <= 200; i++) {
+            if(isPrime(i)) {
+                table += `<tr><td><mark>${i}</mark></td></tr>`;
+            }
+          }
+
+          table += "</table>";
+
+          document.body.innerHTML = table;
+
+    </script>
+    
+</body>
+</html>

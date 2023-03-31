@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de todos os múltiplos de 3 ou 5 abaixo de 1000.</title>
+</head>
+<body>
+    
+    <h1>Soma de todos os múltiplos de 3 ou 5 abaixo de 1000.</h1>
+    <div id="resultado"></div>
+    <script>
+
+        let soma = 0
+    
+        for(let i = 0; i < 1000; i++) {
+            if((i % 5 === 0) || (i % 3 === 0)) {
+                soma+=i
+            }
+        }
+    
+        console.log(soma)
+    
+        document.getElementById("resultado").textContent = soma
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de caracteres em resultado ordenado</title>
+</head>
+<body>
+    
+    <h1>Sequência de caracteres em resultado ordenado</h1>
+
+    <div id="original"></div>
+    <div id="ordenada"></div>
+
+    <script>
+
+        const sequencia = prompt("Digite uma sequencia de caracteres")
+
+        const sequenciaOrdenada = sequencia.split("").sort().join("")
+
+        document.getElementById("original").textContent = `Sequência original: ${sequencia}`
+        console.log("Sequência original: " + sequencia)
+
+        document.getElementById("ordenada").textContent = `Sequência ordenada: ${sequenciaOrdenada}`
+        console.log("Sequência ordenada: " + sequenciaOrdenada)
+
+    </script>
+
+</body>
+</html>

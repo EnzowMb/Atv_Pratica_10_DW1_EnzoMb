@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de Fibonacci</title>
+</head>
+<body>
+
+    <h1>Soma dos pares da sequência de Fibonacci(Não excede 50mil)</h1>
+    <div id="resultado"></div>
+    <script>
+
+        let termo1 = 0
+        let termo2 = 1
+        let soma = 0
+
+        while(termo2 < 50000) {
+            let novoTermo = termo1 + termo2
+            if(novoTermo % 2 === 0) {
+                soma+=novoTermo
+            }
+            termo1 = termo2
+            termo2 = novoTermo
+        }
+
+        console.log(soma)
+        
+        document.getElementById("resultado").textContent = soma
+
+    </script>
+    
+</body>
+</html>

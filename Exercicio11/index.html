@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do Delta (Δ) de uma função de segundo grau.</title>
+</head>
+<body>
+
+    <h1>Cálculo do Delta (Δ) de uma função de segundo grau.</h1>
+
+    <div id="parte1"></div>
+    <div id="parte2"></div>
+    <div id="parte3"></div>
+    <div id="parte4"></div>
+
+    <script>
+
+        let a = parseFloat(prompt("Digite o valor de a:"));
+        let b = parseFloat(prompt("Digite o valor de b:"));
+        let c = parseFloat(prompt("Digite o valor de c:"));
+
+        let delta = Math.pow(b, 2) - 4 * a * c;
+
+        document.getElementById("parte1").textContent = `Δ = b² - 4ac`
+        console.log(`Δ = b² - 4ac`);
+
+        document.getElementById("parte2").textContent = `Δ = ${b}² - 4*${a}*${c}`
+        console.log(`Δ = ${b}² - 4*${a}*${c}`);
+
+        document.getElementById("parte3").textContent = `Δ = ${Math.pow(b, 2)} - ${4 * a * c}`
+        console.log(`Δ = ${Math.pow(b, 2)} - ${4 * a * c}`);
+
+        document.getElementById("parte4").textContent = `Δ = ${delta}`
+        console.log(`Δ = ${delta}`);
+
+        alert(`O delta é ${delta}.`);
+
+    </script>
+    
+</body>
+</html>

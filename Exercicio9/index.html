@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Primo</title>
+</head>
+<body>
+
+    <h1>O 1001° número primo</h1>
+    <div id="resultado"></div>
+    <script>
+
+       function isPrime(num) {
+        if(num <= 1) {
+            return false
+        }
+
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+            return false;
+            }
+        }
+
+        return true
+       }
+
+       let count = 1;
+       let num = 2;
+
+
+       while (count < 1001) {
+        num++;
+  
+        if (isPrime(num)) {
+        count++;
+        }
+        }
+
+        console.log(num)
+        document.getElementById("resultado").textContent = num
+
+    </script>
+    
+</body>
+</html>
